@@ -1,0 +1,158 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-page {
+  height: 100vh;
+  background: url('background.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.login-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.login-card {
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.login-card h1 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #333;
+}
+
+.login-card p {
+  margin-bottom: 25px;
+  color: #666;
+}
+
+.manual-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.manual-form input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.manual-form input:focus {
+  border-color: #4285f4;
+  outline: none;
+}
+
+.manual-form button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.manual-form button:hover {
+  background-color: #218838;
+}
+
+hr {
+  margin: 25px 0;
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.login-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.login-btn:hover {
+  background-color: #2f70d6;
+}
+
+.google-icon {
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .login-card {
+    padding: 30px 20px;
+    width: 95%;
+    max-width: 360px;
+  }
+
+  .login-card h1 {
+    font-size: 24px;
+  }
+
+  .login-card p {
+    font-size: 14px;
+  }
+
+  .manual-form input,
+  .manual-form button,
+  .login-btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 25px 16px;
+    max-width: 320px;
+  }
+
+  .login-card h1 {
+    font-size: 22px;
+  }
+
+  .manual-form input,
+  .manual-form button,
+  .login-btn {
+    font-size: 14px;
+    padding: 9px;
+  }
+
+  .google-icon {
+    height: 18px;
+  }
+}
